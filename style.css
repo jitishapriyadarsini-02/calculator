@@ -1,0 +1,614 @@
+/* ==========================================================================
+   Aesthetic Calculator Design System & Theme Variables
+   ========================================================================== */
+
+:root {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Dark Theme (Default) */
+[data-theme="dark"] {
+  --body-bg: #090d16;
+  --glow-1: rgba(99, 102, 241, 0.28);
+  --glow-2: rgba(236, 72, 153, 0.22);
+  --glow-3: rgba(14, 165, 233, 0.2);
+
+  --calc-bg: rgba(18, 24, 38, 0.68);
+  --calc-border: rgba(255, 255, 255, 0.1);
+  --calc-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.75), 0 0 35px rgba(99, 102, 241, 0.12);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --display-bg: rgba(10, 15, 29, 0.65);
+  --display-border: rgba(255, 255, 255, 0.06);
+
+  --key-num-bg: rgba(255, 255, 255, 0.05);
+  --key-num-hover: rgba(255, 255, 255, 0.1);
+  --key-num-active: rgba(255, 255, 255, 0.16);
+  --key-num-text: #f1f5f9;
+  --key-num-border: rgba(255, 255, 255, 0.06);
+
+  --key-func-bg: rgba(148, 163, 184, 0.12);
+  --key-func-hover: rgba(148, 163, 184, 0.22);
+  --key-func-active: rgba(148, 163, 184, 0.3);
+  --key-func-text: #cbd5e1;
+  --key-func-border: rgba(255, 255, 255, 0.08);
+
+  --key-op-bg: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  --key-op-hover: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  --key-op-active: linear-gradient(135deg, #4338ca 0%, #3730a3 100%);
+  --key-op-text: #ffffff;
+  --key-op-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+
+  --key-equals-bg: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #6366f1 100%);
+  --key-equals-hover: linear-gradient(135deg, #db2777 0%, #7c3aed 50%, #4f46e5 100%);
+  --key-equals-active: linear-gradient(135deg, #be185d 0%, #6d28d9 50%, #4338ca 100%);
+  --key-equals-shadow: 0 6px 20px rgba(236, 72, 153, 0.45);
+
+  --history-bg: rgba(15, 23, 42, 0.95);
+  --history-item-hover: rgba(255, 255, 255, 0.06);
+  --history-border: rgba(255, 255, 255, 0.08);
+
+  --badge-bg: rgba(255, 255, 255, 0.08);
+  --badge-text: #94a3b8;
+  --badge-border: rgba(255, 255, 255, 0.06);
+}
+
+/* Light Theme (Aesthetic Pastel Cloud) */
+[data-theme="light"] {
+  --body-bg: #f1f5f9;
+  --glow-1: rgba(168, 85, 247, 0.2);
+  --glow-2: rgba(244, 114, 182, 0.2);
+  --glow-3: rgba(56, 189, 248, 0.22);
+
+  --calc-bg: rgba(255, 255, 255, 0.72);
+  --calc-border: rgba(255, 255, 255, 0.85);
+  --calc-shadow: 0 25px 50px -12px rgba(100, 116, 139, 0.25), 0 0 30px rgba(168, 85, 247, 0.08);
+
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+
+  --display-bg: rgba(248, 250, 252, 0.75);
+  --display-border: rgba(226, 232, 240, 0.8);
+
+  --key-num-bg: rgba(255, 255, 255, 0.85);
+  --key-num-hover: rgba(255, 255, 255, 1);
+  --key-num-active: rgba(241, 245, 249, 1);
+  --key-num-text: #1e293b;
+  --key-num-border: rgba(226, 232, 240, 0.8);
+
+  --key-func-bg: rgba(241, 245, 249, 0.85);
+  --key-func-hover: rgba(226, 232, 240, 0.9);
+  --key-func-active: rgba(203, 213, 225, 0.9);
+  --key-func-text: #334155;
+  --key-func-border: rgba(226, 232, 240, 0.8);
+
+  --key-op-bg: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  --key-op-hover: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  --key-op-active: linear-gradient(135deg, #4338ca 0%, #3730a3 100%);
+  --key-op-text: #ffffff;
+  --key-op-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+
+  --key-equals-bg: linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #6366f1 100%);
+  --key-equals-hover: linear-gradient(135deg, #db2777 0%, #7c3aed 50%, #4f46e5 100%);
+  --key-equals-active: linear-gradient(135deg, #be185d 0%, #6d28d9 50%, #4338ca 100%);
+  --key-equals-shadow: 0 6px 20px rgba(236, 72, 153, 0.35);
+
+  --history-bg: rgba(255, 255, 255, 0.96);
+  --history-item-hover: rgba(241, 245, 249, 0.8);
+  --history-border: rgba(226, 232, 240, 0.8);
+
+  --badge-bg: rgba(255, 255, 255, 0.6);
+  --badge-text: #64748b;
+  --badge-border: rgba(226, 232, 240, 0.8);
+}
+
+/* ==========================================================================
+   Base & Reset
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-bg);
+  font-family: var(--font-main);
+  color: var(--text-primary);
+  padding: 1.5rem;
+  overflow-x: hidden;
+  position: relative;
+  transition: background-color 0.35s ease;
+}
+
+/* Ambient Floating Glow Spheres */
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+  transition: opacity 0.5s ease;
+}
+
+.glow-1 {
+  width: 420px;
+  height: 420px;
+  background: var(--glow-1);
+  top: -10%;
+  left: 15%;
+  animation: floatOrb 18s ease-in-out infinite alternate;
+}
+
+.glow-2 {
+  width: 380px;
+  height: 380px;
+  background: var(--glow-2);
+  bottom: -5%;
+  right: 15%;
+  animation: floatOrb 15s ease-in-out infinite alternate-reverse;
+}
+
+.glow-3 {
+  width: 300px;
+  height: 300px;
+  background: var(--glow-3);
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  animation: floatOrb 22s ease-in-out infinite alternate;
+}
+
+@keyframes floatOrb {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-30px) scale(1.08); }
+  100% { transform: translateY(20px) scale(0.95); }
+}
+
+/* ==========================================================================
+   App Container & Card Layout
+   ========================================================================== */
+
+.calculator-app {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 375px;
+}
+
+.calculator-card {
+  width: 100%;
+  position: relative;
+  background: var(--calc-bg);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid var(--calc-border);
+  border-radius: 30px;
+  padding: 1.4rem 1.4rem 1.6rem;
+  box-shadow: var(--calc-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: var(--transition-smooth);
+}
+
+/* Header Bar */
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.25rem;
+}
+
+.window-dots {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.85;
+}
+
+.dot-close { background: #ff5f56; }
+.dot-minimize { background: #ffbd2e; }
+.dot-expand { background: #27c93f; }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--calc-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.icon-btn:active {
+  transform: scale(0.92);
+}
+
+/* ==========================================================================
+   History Dropdown Panel
+   ========================================================================== */
+
+.history-panel {
+  position: absolute;
+  top: 56px;
+  left: 1.4rem;
+  right: 1.4rem;
+  background: var(--history-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--history-border);
+  border-radius: 20px;
+  padding: 1rem;
+  z-index: 10;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px) scale(0.97);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  max-height: 250px;
+}
+
+.history-panel.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--history-border);
+  padding-bottom: 0.5rem;
+}
+
+.clear-history-btn {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+  transition: var(--transition-smooth);
+}
+
+.clear-history-btn:hover {
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  max-height: 180px;
+  padding-right: 4px;
+}
+
+.history-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.45rem 0.6rem;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.history-item:hover {
+  background: var(--history-item-hover);
+}
+
+.history-equation {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.history-result {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.history-empty {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 1.5rem 0;
+}
+
+/* ==========================================================================
+   Display Section
+   ========================================================================== */
+
+.calc-display {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 108px;
+  padding: 1rem 1.25rem;
+  background: var(--display-bg);
+  border: 1px solid var(--display-border);
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.calc-display:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.previous-equation {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  min-height: 1.4rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.current-value-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.current-value {
+  font-family: var(--font-mono);
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  transition: font-size 0.15s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+/* Copy notification tooltip */
+.copy-badge {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.copy-badge.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   Keypad Grid & Buttons
+   ========================================================================== */
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.key {
+  height: 64px;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  font-family: var(--font-main);
+  font-size: 1.35rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  transition: var(--transition-smooth), var(--transition-spring);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.key:active,
+.key.key-active {
+  transform: scale(0.93) translateY(1px);
+}
+
+/* Numeric Keys */
+.key-num {
+  background: var(--key-num-bg);
+  color: var(--key-num-text);
+  border: 1px solid var(--key-num-border);
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+
+.key-num:hover {
+  background: var(--key-num-hover);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.key-num:active,
+.key-num.key-active {
+  background: var(--key-num-active);
+}
+
+/* Functional Keys (AC, DEL, %, ±) */
+.key-func {
+  background: var(--key-func-bg);
+  color: var(--key-func-text);
+  border: 1px solid var(--key-func-border);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.key-func:hover {
+  background: var(--key-func-hover);
+}
+
+.key-func:active,
+.key-func.key-active {
+  background: var(--key-func-active);
+}
+
+/* Operator Keys (+, −, ×, ÷) */
+.key-operator {
+  background: var(--key-op-bg);
+  color: var(--key-op-text);
+  font-size: 1.55rem;
+  font-weight: 500;
+  box-shadow: var(--key-op-shadow);
+}
+
+.key-operator:hover {
+  background: var(--key-op-hover);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.55);
+}
+
+.key-operator:active,
+.key-operator.key-active {
+  background: var(--key-op-active);
+}
+
+/* Equals Button */
+.key-equals {
+  background: var(--key-equals-bg);
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  box-shadow: var(--key-equals-shadow);
+}
+
+.key-equals:hover {
+  background: var(--key-equals-hover);
+  box-shadow: 0 8px 24px rgba(236, 72, 153, 0.6);
+}
+
+.key-equals:active,
+.key-equals.key-active {
+  background: var(--key-equals-active);
+}
+
+/* ==========================================================================
+   Footer Badges & Responsive Design
+   ========================================================================== */
+
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--badge-border);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 420px) {
+  .calculator-app {
+    max-width: 100%;
+  }
+
+  .calculator-card {
+    padding: 1.2rem 1.1rem 1.3rem;
+    border-radius: 26px;
+    gap: 1.1rem;
+  }
+
+  .key {
+    height: 58px;
+    border-radius: 16px;
+    font-size: 1.25rem;
+  }
+
+  .current-value {
+    font-size: 2.2rem;
+  }
+}

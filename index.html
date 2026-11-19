@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <div class="calculator-app">
+    <!-- Calculator Card -->
+    <div class="calculator-card">
+      <!-- Card Header / Controls Bar -->
+      <header class="calc-header">
+        <div class="window-dots">
+          <span class="dot dot-close"></span>
+          <span class="dot dot-minimize"></span>
+          <span class="dot dot-expand"></span>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="icon-btn" id="sound-toggle" title="Toggle Sound Feedback" aria-label="Toggle Sound">
+            <span class="icon" id="sound-icon">🔔</span>
+          </button>
+          <button type="button" class="icon-btn" id="history-toggle" title="Calculation History" aria-label="Calculation History">
+            <span class="icon">🕒</span>
+          </button>
+          <button type="button" class="icon-btn" id="theme-toggle" title="Switch Theme (Dark / Light)" aria-label="Toggle Theme">
+            <span class="icon" id="theme-icon">🌙</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- History Dropdown Panel -->
+      <div class="history-panel" id="history-panel" aria-hidden="true">
+        <div class="history-header">
+          <span>Recent Calculations</span>
+          <button type="button" class="clear-history-btn" id="clear-history">Clear</button>
+        </div>
+        <div class="history-list" id="history-list">
+          <p class="history-empty">No calculations yet</p>
+        </div>
+      </div>
+
+      <!-- Display Section -->
+      <div class="calc-display" id="display-container" title="Click to copy result">
+        <div class="previous-equation" id="previous-operand"></div>
+        <div class="current-value-container">
+          <div class="current-value" id="current-operand">0</div>
+        </div>
+        <div class="copy-badge" id="copy-badge">Copied!</div>
+      </div>
+
+      <!-- Keypad -->
+      <div class="keypad">
+        <button type="button" class="key key-func" data-action="clear" aria-label="Clear All">AC</button>
+        <button type="button" class="key key-func" data-action="delete" aria-label="Delete last digit">⌫</button>
+        <button type="button" class="key key-func" data-action="percent" aria-label="Percentage">%</button>
+        <button type="button" class="key key-operator" data-operator="÷" aria-label="Divide">÷</button>
+
+        <button type="button" class="key key-num" data-number="7">7</button>
+        <button type="button" class="key key-num" data-number="8">8</button>
+        <button type="button" class="key key-num" data-number="9">9</button>
+        <button type="button" class="key key-operator" data-operator="×" aria-label="Multiply">×</button>
+
+        <button type="button" class="key key-num" data-number="4">4</button>
+        <button type="button" class="key key-num" data-number="5">5</button>
+        <button type="button" class="key key-num" data-number="6">6</button>
+        <button type="button" class="key key-operator" data-operator="-" aria-label="Subtract">−</button>
+
+        <button type="button" class="key key-num" data-number="1">1</button>
+        <button type="button" class="key key-num" data-number="2">2</button>
+        <button type="button" class="key key-num" data-number="3">3</button>
+        <button type="button" class="key key-operator" data-operator="+" aria-label="Add">+</button>
+
+        <button type="button" class="key key-func" data-action="negate" aria-label="Plus or Minus">±</button>
+        <button type="button" class="key key-num" data-number="0">0</button>
+        <button type="button" class="key key-num" data-number=".">.</button>
+        <button type="button" class="key key-equals" data-action="calculate" aria-label="Equals">=</button>
+      </div>
+    </div>
+
+    <!-- Quick keyboard hints footer -->
+    <footer class="app-footer">
+      <span class="pill-badge">⌨️ Keyboard enabled</span>
+    </footer>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

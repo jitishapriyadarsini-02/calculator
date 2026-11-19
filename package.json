@@ -1,0 +1,15 @@
+{
+  "name": "aesthetic-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A beautiful, aesthetic calculator built with HTML, CSS, and JavaScript",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  }
+}
